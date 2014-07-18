@@ -1,18 +1,27 @@
 package com.example.eseshalisaha;
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ListView;
 
 public class MainActivity extends Activity {
 
+	final List<Halisahalar> halisahalar=new ArrayList<Halisahalar>();
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		//deneme
+		final ListView listemiz = (ListView) findViewById(R.id.liste);
+		ListViewAdapter adapter =new ListViewAdapter(this, halisahalar);
+	    listemiz.setAdapter(adapter);
+		halisahalar.add(new Halisahalar("Demirspor Halý Sahasý", "demirspor"));
 
 	}
 
