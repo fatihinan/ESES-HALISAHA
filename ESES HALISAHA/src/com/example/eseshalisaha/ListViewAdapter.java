@@ -1,9 +1,12 @@
 package com.example.eseshalisaha;
 
+import java.io.ByteArrayInputStream;
 import java.util.List;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,9 +17,9 @@ import android.widget.TextView;
 public class ListViewAdapter extends BaseAdapter{
 
 		private LayoutInflater m_inflater;
-	    private List<Halisahalar> halisahalar_listesi;
+	    private List<Halisaha> halisahalar_listesi;
 	 
-	    public ListViewAdapter(Activity activity, List<Halisahalar> halisahalar) {
+	    public ListViewAdapter(Activity activity, List<Halisaha> halisahalar) {
 	        
 	        m_inflater = (LayoutInflater) activity.getSystemService(
 	                Context.LAYOUT_INFLATER_SERVICE);
@@ -29,7 +32,7 @@ public class ListViewAdapter extends BaseAdapter{
 	    }
 	 
 	    @Override
-	    public Halisahalar getItem(int position) {
+	    public Halisaha getItem(int position) {
 	        return halisahalar_listesi.get(position);
 	    }
 	 
@@ -45,14 +48,13 @@ public class ListViewAdapter extends BaseAdapter{
 	        satirView = m_inflater.inflate(R.layout.satir_layout, null);
 	        TextView textView = (TextView) satirView.findViewById(R.id.isim); 
 	        ImageView imageView = (ImageView) satirView.findViewById(R.id.simge);
-	        Halisahalar saha = halisahalar_listesi.get(position);
+	        Halisaha saha = halisahalar_listesi.get(position);
 	 
-	        textView.setText(saha.getIsim());
-	 
-	        
-	        if (saha.getSimge()=="demirspor") {
-	            imageView.setImageResource(R.drawable.demirspor);
-	        }
+	        textView.setText(saha.IsimGetir());
+	        byte[] resim=saha.SimgeGetir();
+	        ByteArrayInputStream resim_stream = new ByteArrayInputStream(resim);
+	        Bitmap resim_bitmap = BitmapFactory.decodeStream(resim_stream);
+	        imageView.setImageBitmap(resim_bitmap);
 	        
 	        return satirView;
 		}
