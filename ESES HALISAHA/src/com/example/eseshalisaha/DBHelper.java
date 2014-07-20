@@ -23,7 +23,8 @@ public class DBHelper extends SQLiteOpenHelper {
 
    @Override
    public void onCreate(SQLiteDatabase db) {
-      String sql = "CREATE TABLE " + TABLO_HALISAHALAR + "(id INTEGER PRIMARY KEY, halisaha_isim TEXT, halisaha_telefon TEXT, halisaha_simge BLOB" + ")";
+      String sql = "CREATE TABLE " + TABLO_HALISAHALAR + "(id INTEGER PRIMARY KEY, halisaha_isim TEXT, halisaha_telefon TEXT, halisaha_logo BLOB," +
+      		       "halisaha_sahalar TEXT, halisaha_adres TEXT " + ")";
       Log.d("DBHelper", "SQL : " + sql);
       db.execSQL(sql);
    }
@@ -40,7 +41,9 @@ public class DBHelper extends SQLiteOpenHelper {
       ContentValues values = new ContentValues();
       values.put("halisaha_isim", saha.IsimGetir());
       values.put("halisaha_telefon", saha.TelefonGetir());
-      values.put("halisaha_simge", saha.SimgeGetir());
+      values.put("halisaha_logo", saha.LogoGetir());
+      values.put("halisaha_sahalar", saha.SahaGetir());
+      values.put("halisaha_adres", saha.AdresGetir());
       
       db.insert(TABLO_HALISAHALAR, null, values);
       db.close();
@@ -53,13 +56,15 @@ public class DBHelper extends SQLiteOpenHelper {
       // String sqlQuery = "SELECT  * FROM " + TABLE_COUNTRIES;
       // Cursor cursor = db.rawQuery(sqlQuery, null);
 
-      Cursor cursor = db.query(TABLO_HALISAHALAR, new String[]{"id", "halisaha_isim", "halisaha_telefon", "halisaha_simge"}, null, null, null, null, null);
+      Cursor cursor = db.query(TABLO_HALISAHALAR, new String[]{"id", "halisaha_isim", "halisaha_telefon", "halisaha_logo", "halisaha_sahalar", "halisaha_adres"}, null, null, null, null, null);
       while (cursor.moveToNext()) {
     	  Halisaha saha = new Halisaha();
          saha.IdAl(cursor.getInt(0));
          saha.IsimAl(cursor.getString(1));
          saha.TelefonAl(cursor.getString(2));
-         saha.SimgeAl(cursor.getBlob(3));
+         saha.LogoAl(cursor.getBlob(3));
+         saha.SahaAl(cursor.getString(4));
+         saha.AdresAl(cursor.getString(5));
          halisahalar.add(saha);
       }
 

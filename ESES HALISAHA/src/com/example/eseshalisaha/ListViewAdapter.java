@@ -51,7 +51,7 @@ public class ListViewAdapter extends BaseAdapter{
 	        Halisaha saha = halisahalar_listesi.get(position);
 	 
 	        textView.setText(saha.IsimGetir());
-	        byte[] resim=saha.SimgeGetir();
+	        byte[] resim=saha.LogoGetir();
 	        ByteArrayInputStream resim_stream = new ByteArrayInputStream(resim);
 	        Bitmap resim_bitmap = BitmapFactory.decodeStream(resim_stream);
 	        imageView.setImageBitmap(resim_bitmap);
