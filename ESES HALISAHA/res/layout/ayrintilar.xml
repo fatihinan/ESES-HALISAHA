@@ -1,9 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:background="#C3FDB8"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/arayuz1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
-    
+    android:orientation="vertical" 
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/tw_saha_adi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:text="TextView" />
+    
+    <TextView
+        android:id="@+id/tw_adres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/tw_saha_adi"
+        android:text="TextView" />
+    
+    <TextView
+        android:id="@+id/tw_telefon_numarasi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/tw_adres"
+        android:text="TextView" />
+    
+    <TextView
+        android:id="@+id/tw_sahalar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/tw_telefon_numarasi"
+        android:text="TextView" />
+
+    <ImageView
+        android:id="@+id/iw_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_alignLeft="@+id/tw_sahalar"
+        android:layout_alignRight="@+id/map"
+        android:layout_below="@id/tw_sahalar"
+        android:src="@drawable/arayuz1" />
+    
+    <fragment
+        android:id="@+id/map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/iw_logo"
+        class="com.google.android.gms.maps.MapFragment" />
+
+</RelativeLayout>
