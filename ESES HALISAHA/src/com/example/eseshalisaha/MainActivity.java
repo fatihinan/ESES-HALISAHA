@@ -1,17 +1,12 @@
 package com.example.eseshalisaha;
 
 
-import java.io.ByteArrayOutputStream;
-import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
-
 import android.app.Activity;
+import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
-import android.os.Environment;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -79,9 +74,12 @@ public class MainActivity extends Activity {
 	    listemiz.setOnItemClickListener(new OnItemClickListener() {
 	         @Override
 	         public void onItemClick(AdapterView<?> arg0, View arg1, int position, long arg3) {
-	            Toast.makeText(getApplicationContext(),
-	                           ((Halisaha) listemiz.getAdapter().getItem(position)).TelefonGetir()+" "+((Halisaha) listemiz.getAdapter().getItem(position)).SahaGetir()+" "+((Halisaha) listemiz.getAdapter().getItem(position)).AdresGetir(),
-	                           Toast.LENGTH_LONG).show();
+//	            Toast.makeText(getApplicationContext(),
+//	                           ((Halisaha) listemiz.getAdapter().getItem(position)).TelefonGetir()+" "+((Halisaha) listemiz.getAdapter().getItem(position)).SahaGetir()+" "+((Halisaha) listemiz.getAdapter().getItem(position)).AdresGetir(),
+//	                           Toast.LENGTH_LONG).show();
+
+	            Intent myIntent = new Intent(MainActivity.this, Ayrintilar.class);
+	            MainActivity.this.startActivity(myIntent);
 	         }
 	      });
 
