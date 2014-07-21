@@ -13,8 +13,6 @@ public class Halisaha implements Serializable {
 
    private String            halisaha_telefon;
    
-   private byte[]            halisaha_logo;
-   
    private String            halisaha_sahalar;
    
    private String            halisaha_adres;
@@ -23,11 +21,10 @@ public class Halisaha implements Serializable {
       super();
    }
 
-   public Halisaha(String halisaha_isim, String halisaha_telefon, byte[] halisaha_logo, String halisaha_sahalar, String halisaha_adres) {
+   public Halisaha(String halisaha_isim, String halisaha_telefon, String halisaha_sahalar, String halisaha_adres) {
       super();
       this.halisaha_isim = halisaha_isim;
       this.halisaha_telefon = halisaha_telefon;
-      this.halisaha_logo = halisaha_logo;
       this.halisaha_sahalar = halisaha_sahalar;
       this.halisaha_adres = halisaha_adres;
    }
@@ -54,14 +51,6 @@ public class Halisaha implements Serializable {
 
    public void IsimAl(String halisaha_isim) {
       this.halisaha_isim = halisaha_isim;
-   }
-
-   public void LogoAl(byte[] halisaha_logo) {
-       this.halisaha_logo = halisaha_logo;
-   }
-   
-   public byte[] LogoGetir() {
-       return halisaha_logo;
    }
    
    public String SahaGetir() {

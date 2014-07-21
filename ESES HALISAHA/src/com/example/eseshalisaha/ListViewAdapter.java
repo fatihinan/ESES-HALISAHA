@@ -51,10 +51,28 @@ public class ListViewAdapter extends BaseAdapter{
 	        Halisaha saha = halisahalar_listesi.get(position);
 	 
 	        textView.setText(saha.IsimGetir());
-	        byte[] resim=saha.LogoGetir();
-	        ByteArrayInputStream resim_stream = new ByteArrayInputStream(resim);
-	        Bitmap resim_bitmap = BitmapFactory.decodeStream(resim_stream);
-	        imageView.setImageBitmap(resim_bitmap);
+	        if(saha.IdGetir()==1)
+	        	imageView.setImageResource(R.drawable.demirspor);
+	        else if(saha.IdGetir()==2)
+	        	imageView.setImageResource(R.drawable.ataturkmesleklisesi);
+	        else if(saha.IdGetir()==3)
+	        	imageView.setImageResource(R.drawable.esplanetpark);
+	        else if(saha.IdGetir()==4)
+	        	imageView.setImageResource(R.drawable.fethiheperhalisaha);
+	        else if(saha.IdGetir()==5)
+	        	imageView.setImageResource(R.drawable.logoyok);
+	        else if(saha.IdGetir()==6)
+			    imageView.setImageResource(R.drawable.esbay);
+	        else if(saha.IdGetir()==7)
+			    imageView.setImageResource(R.drawable.logoyok);
+	        else if(saha.IdGetir()==8)
+			    imageView.setImageResource(R.drawable.logoyok);
+	        else if(saha.IdGetir()==9)
+			    imageView.setImageResource(R.drawable.sportmen);
+	        else if(saha.IdGetir()==10)
+			    imageView.setImageResource(R.drawable.cavusoglu);
+	        else
+			    imageView.setImageResource(R.drawable.logoyok);
 	        
 	        return satirView;
 		}
