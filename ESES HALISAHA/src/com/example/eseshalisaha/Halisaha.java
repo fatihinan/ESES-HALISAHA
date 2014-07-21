@@ -28,6 +28,15 @@ public class Halisaha implements Serializable {
       this.halisaha_sahalar = halisaha_sahalar;
       this.halisaha_adres = halisaha_adres;
    }
+   
+   public Halisaha(int id, String halisaha_isim, String halisaha_telefon, String halisaha_sahalar, String halisaha_adres) {
+	      super();
+	      this.id = id;// Upgrading database
+	      this.halisaha_isim = halisaha_isim;
+	      this.halisaha_telefon = halisaha_telefon;
+	      this.halisaha_sahalar = halisaha_sahalar;
+	      this.halisaha_adres = halisaha_adres;
+	   }
 
    public String TelefonGetir() {
       return halisaha_telefon;

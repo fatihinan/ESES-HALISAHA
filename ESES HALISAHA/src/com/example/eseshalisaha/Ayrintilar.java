@@ -12,12 +12,23 @@ import android.widget.TextView;
 public class Ayrintilar extends Activity
 {
 	GoogleMap harita = null;
+	DBHelper db;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) 
 	{
+		
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.ayrintilar);
+		
+		db = new DBHelper(this);
+		
+		Bundle extras = getIntent().getExtras();
+		int position = extras.getInt("position");
+		
+		Halisaha hs = new Halisaha();
+		hs = db.getContact(++position);
+		
 		harita = ((MapFragment) getFragmentManager().findFragmentById(R.id.map)).getMap();
 		harita.setMapType(GoogleMap.MAP_TYPE_HYBRID);
 		harita.setMyLocationEnabled(true);
@@ -27,6 +38,11 @@ public class Ayrintilar extends Activity
 		TextView tw_sahalar = (TextView) findViewById(R.id.tw_sahalar);
 		TextView tw_telefon_numarasý = (TextView) findViewById(R.id.tw_telefon_numarasi);
 		ImageView iw_logo = (ImageView) findViewById(R.id.iw_logo);
+		
+		tw_saha_adi.setText("Saha Adý : " + hs.IsimGetir());
+		tw_adres.setText("Adres : " + hs.AdresGetir());
+		tw_sahalar.setText("Sahalar : " + hs.SahaGetir());
+		tw_telefon_numarasý.setText("Telefon Numarasý : " + hs.TelefonGetir());
 
 	}
 	

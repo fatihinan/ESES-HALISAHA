@@ -52,9 +52,6 @@ public class DBHelper extends SQLiteOpenHelper {
       List<Halisaha> halisahalar = new ArrayList<Halisaha>();
       SQLiteDatabase db = this.getWritableDatabase();
 
-      // String sqlQuery = "SELECT  * FROM " + TABLE_COUNTRIES;
-      // Cursor cursor = db.rawQuery(sqlQuery, null);
-
       Cursor cursor = db.query(TABLO_HALISAHALAR, new String[]{"id", "halisaha_isim", "halisaha_telefon", "halisaha_sahalar", "halisaha_adres"}, null, null, null, null, null);
       while (cursor.moveToNext()) {
     	  Halisaha saha = new Halisaha();
@@ -65,8 +62,30 @@ public class DBHelper extends SQLiteOpenHelper {
          saha.AdresAl(cursor.getString(4));
          halisahalar.add(saha);
       }
-
       return halisahalar;
+   }
+   
+   
+   
+   
+// Getting single contact
+   Halisaha getContact(int id) {
+       SQLiteDatabase db = this.getWritableDatabase();
+
+       Cursor cursor = db.query(TABLO_HALISAHALAR, new String[]{"id", "halisaha_isim", "halisaha_telefon", "halisaha_sahalar", "halisaha_adres"}, "id" + "=?", new String[]{String.valueOf(id)}, null, null, null, null);
+
+       if (cursor != null)
+           cursor.moveToFirst();
+
+       Halisaha saha = new Halisaha();
+       saha.IdAl(cursor.getInt(0));
+       saha.IsimAl(cursor.getString(1));
+       saha.TelefonAl(cursor.getString(2));
+       saha.SahaAl(cursor.getString(3));
+       saha.AdresAl(cursor.getString(4));
+       
+       return saha;
+
    }
 
 }

@@ -24,7 +24,7 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		final ListView listemiz = (ListView) findViewById(R.id.liste);
-		DBHelper dbHelper = new DBHelper(getApplicationContext());
+		final DBHelper dbHelper = new DBHelper(getApplicationContext());
         SharedPreferences settings = getSharedPreferences("SQL", 0);
 		listemiz.setBackgroundResource(R.drawable.arayuz1);
         boolean firstTime = settings.getBoolean("firstTime", true);
@@ -78,8 +78,9 @@ public class MainActivity extends Activity {
 //	                           ((Halisaha) listemiz.getAdapter().getItem(position)).TelefonGetir()+" "+((Halisaha) listemiz.getAdapter().getItem(position)).SahaGetir()+" "+((Halisaha) listemiz.getAdapter().getItem(position)).AdresGetir(),
 //	                           Toast.LENGTH_LONG).show();
 
-	            Intent myIntent = new Intent(MainActivity.this, Ayrintilar.class);
-	            MainActivity.this.startActivity(myIntent);
+	            Intent intent = new Intent(MainActivity.this, Ayrintilar.class);
+	            intent.putExtra("position", position);
+	            MainActivity.this.startActivity(intent);
 	         }
 	      });
 
