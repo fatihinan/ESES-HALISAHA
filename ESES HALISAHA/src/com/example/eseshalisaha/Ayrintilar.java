@@ -1,7 +1,12 @@
 package com.example.eseshalisaha;
 
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
+import com.google.android.gms.maps.model.MarkerOptions;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -14,6 +19,7 @@ public class Ayrintilar extends Activity
 {
 	GoogleMap harita = null;
 	DBHelper db;
+	Marker saha_konum;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) 
@@ -27,12 +33,11 @@ public class Ayrintilar extends Activity
 		Bundle extras = getIntent().getExtras();
 		int position = extras.getInt("position");
 		
-		View background = findViewById(R.id.background);
+//		View background = findViewById(R.id.background);
+//		background.setBackgroundResource(R.drawable.esbay);
 		
-		background.setBackgroundResource(R.drawable.esbay);
-		
-		Halisaha hs = new Halisaha();
-		hs = db.getContact(++position);
+		Halisaha halisaha = new Halisaha();
+		halisaha = db.getContact(++position);
 		
 		harita = ((MapFragment) getFragmentManager().findFragmentById(R.id.map)).getMap();
 		harita.setMapType(GoogleMap.MAP_TYPE_HYBRID);
@@ -43,10 +48,21 @@ public class Ayrintilar extends Activity
 		TextView tw_sahalar = (TextView) findViewById(R.id.tw_sahalar);
 		TextView tw_telefon_numarasý = (TextView) findViewById(R.id.tw_telefon_numarasi);
 		
-		tw_saha_adi.setText(hs.IsimGetir());
-		tw_adres.setText(hs.AdresGetir());
-		tw_sahalar.setText(hs.SahaGetir());
-		tw_telefon_numarasý.setText(hs.TelefonGetir());
+		tw_saha_adi.setText(halisaha.IsimGetir());
+		tw_adres.setText(halisaha.AdresGetir());
+		tw_sahalar.setText(halisaha.SahaGetir());
+		tw_telefon_numarasý.setText(halisaha.TelefonGetir());
+		
+		double d_enlem = Double.parseDouble(halisaha.EnlemGetir());
+		double d_boylam = Double.parseDouble(halisaha.BoylamGetir());
+		
+		saha_konum = harita.addMarker(new MarkerOptions()
+        .position(new LatLng(d_enlem, d_boylam))
+        .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE))
+        .title(halisaha.IsimGetir()));
+		saha_konum.showInfoWindow();
+		
+		harita.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(d_enlem, d_boylam), 17));
 
 	}
 	

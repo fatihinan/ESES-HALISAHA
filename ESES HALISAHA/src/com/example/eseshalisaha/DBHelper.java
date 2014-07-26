@@ -24,7 +24,7 @@ public class DBHelper extends SQLiteOpenHelper {
    @Override
    public void onCreate(SQLiteDatabase db) {
       String sql = "CREATE TABLE " + TABLO_HALISAHALAR + "(id INTEGER PRIMARY KEY, halisaha_isim TEXT, halisaha_telefon TEXT," +
-      		       "halisaha_sahalar TEXT, halisaha_adres TEXT " + ")";
+      		       "halisaha_sahalar TEXT, halisaha_adres TEXT, halisaha_enlem TEXT, halisaha_boylam TEXT " + ")";
       Log.d("DBHelper", "SQL : " + sql);
       db.execSQL(sql);
    }
@@ -43,6 +43,8 @@ public class DBHelper extends SQLiteOpenHelper {
       values.put("halisaha_telefon", saha.TelefonGetir());
       values.put("halisaha_sahalar", saha.SahaGetir());
       values.put("halisaha_adres", saha.AdresGetir());
+      values.put("halisaha_enlem", saha.EnlemGetir());
+      values.put("halisaha_boylam", saha.BoylamGetir());
       
       db.insert(TABLO_HALISAHALAR, null, values);
       db.close();
@@ -70,9 +72,9 @@ public class DBHelper extends SQLiteOpenHelper {
    
 // Getting single contact
    Halisaha getContact(int id) {
-       SQLiteDatabase db = this.getWritableDatabase();
+       SQLiteDatabase db = this.getReadableDatabase();
 
-       Cursor cursor = db.query(TABLO_HALISAHALAR, new String[]{"id", "halisaha_isim", "halisaha_telefon", "halisaha_sahalar", "halisaha_adres"}, "id" + "=?", new String[]{String.valueOf(id)}, null, null, null, null);
+       Cursor cursor = db.query(TABLO_HALISAHALAR, new String[]{"id", "halisaha_isim", "halisaha_telefon", "halisaha_sahalar", "halisaha_adres", "halisaha_enlem", "halisaha_boylam"}, "id" + "=?", new String[]{String.valueOf(id)}, null, null, null, null);
 
        if (cursor != null)
            cursor.moveToFirst();
@@ -83,6 +85,8 @@ public class DBHelper extends SQLiteOpenHelper {
        saha.TelefonAl(cursor.getString(2));
        saha.SahaAl(cursor.getString(3));
        saha.AdresAl(cursor.getString(4));
+       saha.EnlemAl(cursor.getString(5));
+       saha.BoylamAl(cursor.getString(6));
        
        return saha;
 
