@@ -3,58 +3,90 @@
     android:background="@drawable/arayuz1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" 
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp">
+    android:orientation="vertical"
+    android:id="@+id/background">
 
+    <TextView
+        android:background="@drawable/back"
+        android:id="@+id/tw_str_saha_adi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:text="SAHA ADI" 
+        android:textSize="16sp"/>
+    
     <TextView
         android:id="@+id/tw_saha_adi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
+        android:layout_below="@id/tw_str_saha_adi"
         android:textColor="#000000"
-        android:text="TextView" />
+        android:text="TextView" 
+        android:textSize="16sp"/>
+    
+    <TextView
+        android:background="@drawable/back"
+        android:id="@+id/tw_str_adres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tw_saha_adi"
+        android:textColor="#000000"
+        android:text="ADRES" 
+        android:textSize="16sp"/>
     
     <TextView
         android:id="@+id/tw_adres"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@id/tw_saha_adi"
+        android:layout_below="@id/tw_str_adres"
         android:textColor="#000000"
-        android:text="TextView" />
+        android:text="TextView" 
+        android:textSize="16sp"/>
+    
+    <TextView
+        android:background="@drawable/back"
+        android:id="@+id/tw_str_telefon_numarasi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tw_adres"
+        android:textColor="#000000"
+        android:text="TELEFON NUMARASI" 
+        android:textSize="16sp"/>
     
     <TextView
         android:id="@+id/tw_telefon_numarasi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@id/tw_adres"
+        android:layout_below="@id/tw_str_telefon_numarasi"
         android:textColor="#000000"
-        android:text="TextView" />
+        android:text="TextView" 
+        android:textSize="16sp"/>
     
+     <TextView
+        android:background="@drawable/back"
+        android:id="@+id/tw_str_sahalar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tw_telefon_numarasi"
+        android:textColor="#000000"
+        android:text="SAHALAR" 
+        android:textSize="16sp"/>
+     
     <TextView
         android:id="@+id/tw_sahalar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@id/tw_telefon_numarasi"
+        android:layout_below="@id/tw_str_sahalar"
         android:textColor="#000000"
-        android:text="TextView" />
+        android:text="TextView" 
+        android:textSize="16sp"/>
 
-    <ImageView
-        android:id="@+id/iw_logo"
-        android:layout_width="wrap_content"
-        android:layout_height="200dp"
-        android:layout_below="@id/tw_sahalar"
-        android:src="@drawable/arayuz1" />
-    
 	  <fragment
 		android:name="com.google.android.gms.maps.MapFragment"
 		android:id="@+id/map"
 		android:layout_width="match_parent"
 		android:layout_height="match_parent" 
-		android:layout_below="@id/iw_logo"/>
+		android:layout_below="@id/tw_sahalar"/>
 
 
 </RelativeLayout>

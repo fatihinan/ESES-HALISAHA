@@ -16,26 +16,34 @@ public class Halisaha implements Serializable {
    private String            halisaha_sahalar;
    
    private String            halisaha_adres;
+   
+   private String            halisaha_enlem; //latitude
+   
+   private String            halisaha_boylam; //longitude
 
    public Halisaha() {
       super();
    }
 
-   public Halisaha(String halisaha_isim, String halisaha_telefon, String halisaha_sahalar, String halisaha_adres) {
+   public Halisaha(String halisaha_isim, String halisaha_telefon, String halisaha_sahalar, String halisaha_adres, String halisaha_enlem, String halisaha_boylam) {
       super();
       this.halisaha_isim = halisaha_isim;
       this.halisaha_telefon = halisaha_telefon;
       this.halisaha_sahalar = halisaha_sahalar;
       this.halisaha_adres = halisaha_adres;
+      this.halisaha_enlem = halisaha_enlem;
+      this.halisaha_boylam = halisaha_boylam;
    }
    
-   public Halisaha(int id, String halisaha_isim, String halisaha_telefon, String halisaha_sahalar, String halisaha_adres) {
+   public Halisaha(int id, String halisaha_isim, String halisaha_telefon, String halisaha_sahalar, String halisaha_adres, String halisaha_enlem, String halisaha_boylam) {
 	      super();
 	      this.id = id;// Upgrading database
 	      this.halisaha_isim = halisaha_isim;
 	      this.halisaha_telefon = halisaha_telefon;
 	      this.halisaha_sahalar = halisaha_sahalar;
 	      this.halisaha_adres = halisaha_adres;
+	      this.halisaha_enlem = halisaha_enlem;
+	      this.halisaha_boylam = halisaha_boylam;
 	   }
 
    public String TelefonGetir() {
@@ -76,5 +84,21 @@ public class Halisaha implements Serializable {
 
    public void AdresAl(String halisaha_adres) {
 	   this.halisaha_adres = halisaha_adres;
+   }
+   
+   public String EnlemGetir() {
+	   return halisaha_enlem;
+   }
+
+   public void EnlemAl(String halisaha_enlem) {
+	   this.halisaha_enlem = halisaha_enlem;
+   }
+   
+   public String BoylamGetir() {
+	   return halisaha_boylam;
+   }
+
+   public void BoylamAl(String halisaha_boylam) {
+	   this.halisaha_boylam = halisaha_boylam;
    }
 }
