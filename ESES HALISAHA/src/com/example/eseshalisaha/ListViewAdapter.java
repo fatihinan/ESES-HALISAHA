@@ -59,18 +59,20 @@ public class ListViewAdapter extends BaseAdapter{
 	        	imageView.setImageResource(R.drawable.esplanetpark);
 	        else if(saha.IdGetir()==4)
 	        	imageView.setImageResource(R.drawable.fethiheperhalisaha);
-	        else if(saha.IdGetir()==5)
-	        	imageView.setImageResource(R.drawable.logoyok);
 	        else if(saha.IdGetir()==6)
 			    imageView.setImageResource(R.drawable.esbay);
-	        else if(saha.IdGetir()==7)
-			    imageView.setImageResource(R.drawable.logoyok);
-	        else if(saha.IdGetir()==8)
-			    imageView.setImageResource(R.drawable.logoyok);
 	        else if(saha.IdGetir()==9)
 			    imageView.setImageResource(R.drawable.sportmen);
 	        else if(saha.IdGetir()==10)
 			    imageView.setImageResource(R.drawable.cavusoglu);
+	        else if(saha.IdGetir()==13)
+			    imageView.setImageResource(R.drawable.sekersporeses);
+	        else if(saha.IdGetir()==15)
+			    imageView.setImageResource(R.drawable.galipturkanhalisahasi);
+	        else if(saha.IdGetir()==16)
+			    imageView.setImageResource(R.drawable.eseshalisaha);
+	        else if(saha.IdGetir()==18)
+			    imageView.setImageResource(R.drawable.ogu);
 	        else
 			    imageView.setImageResource(R.drawable.logoyok);
 	        

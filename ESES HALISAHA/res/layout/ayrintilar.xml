@@ -7,13 +7,14 @@
     android:id="@+id/background">
 
     <TextView
-        android:background="@drawable/back"
+        
         android:id="@+id/tw_str_saha_adi"
+        android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="#000000"
         android:text="SAHA ADI" 
-        android:textSize="16sp"/>
+        android:textSize="20sp"/>
     
     <TextView
         android:id="@+id/tw_saha_adi"
@@ -25,14 +26,15 @@
         android:textSize="16sp"/>
     
     <TextView
-        android:background="@drawable/back"
+        
         android:id="@+id/tw_str_adres"
+        android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/tw_saha_adi"
         android:textColor="#000000"
         android:text="ADRES" 
-        android:textSize="16sp"/>
+        android:textSize="20sp"/>
     
     <TextView
         android:id="@+id/tw_adres"
@@ -44,14 +46,15 @@
         android:textSize="16sp"/>
     
     <TextView
-        android:background="@drawable/back"
+        
         android:id="@+id/tw_str_telefon_numarasi"
+        android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/tw_adres"
         android:textColor="#000000"
         android:text="TELEFON NUMARASI" 
-        android:textSize="16sp"/>
+        android:textSize="20sp"/>
     
     <TextView
         android:id="@+id/tw_telefon_numarasi"
@@ -63,14 +66,15 @@
         android:textSize="16sp"/>
     
      <TextView
-        android:background="@drawable/back"
+        
         android:id="@+id/tw_str_sahalar"
+        android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/tw_telefon_numarasi"
         android:textColor="#000000"
         android:text="SAHALAR" 
-        android:textSize="16sp"/>
+        android:textSize="20sp"/>
      
     <TextView
         android:id="@+id/tw_sahalar"

@@ -33,73 +33,73 @@ public class MainActivity extends Activity {
 				  "Telefon: 0222 224 24 10",
                   "Açýk Saha",
                   "Hoþnudiye Mah. Basýn Þehitleri Cad. Tülomsaþ Lojmanlarý Yaný",
-                  "39.770123",
-                  "30.484476"));
+                  "39.773414",
+                  "30.493933"));
 		  
 	      dbHelper.insertCountry(new Halisaha("ATATÜRK TEKNÝK ve ENDÜSTRÝ MESLEK LÝSESÝ",
 	    		  "Telefon: 0222 230 15 67",
                   "Açýk Saha",
                   "M.Kemal Atatürk Cad. No:55 Odunpazarý",
-                  "39.768911",
-                  "30.515008"));
+                  "39.768417",
+                  "30.514607"));
 	      
 	      dbHelper.insertCountry(new Halisaha("ES PLANET PARK",
 	    		  "Telefon 1: 0222 239 21 21 - Telefon 2: 0222 229 31 64",
                   "Açýk Saha," + " Kapalý Saha",
                   "Yenikent Mh. Kaymaz Sk. No:36",
-                  "39.749309",
-                  "30.515755"));
+                  "39.749374",
+                  "30.515395"));
 	      
 	      dbHelper.insertCountry(new Halisaha("FETHÝ HEPER HALI SAHA",
 	    		  "Telefon: 0222 237 30 03",
                   "Açýk Saha 1, Açýk Saha 2",
                   "Ankara Yolu 71 Evler Kavþaðý",
-                  "39.757993",
-                  "30.581458"));
+                  "39.753725",
+                  "30.589974"));
 	      
 		  dbHelper.insertCountry(new Halisaha("ESSPOR SPOR TESÝSLERÝ",
 				  "Telefon: 0222 245 02 45",
                   "Açýk Saha, " + "Kapalý Saha",
                   "Vadiþehir Mah. Uluaðaç Sk. No:4/A (Ýsmar Yaný) Odunpazarý",
-                  "39.746558",
-                  "30.539623"));
+                  "39.739184",
+                  "30.547008"));
 		  
 	      dbHelper.insertCountry(new Halisaha("ESBAY HALI SAHA",
 	    		  "Telefon: 0222 335 60 70",
                   "Açýk Saha 1, Açýk Saha 2",
                   "Yenibaðlar Mah. Üniversite Cad. Yorulmaz Sk. No:1/A",
-                  "39.788487",
-                  "30.505052"));
+                  "39.788657",
+                  "30.504985"));
 	      
 	      dbHelper.insertCountry(new Halisaha("EKOL HALI SAHA",
 	    		  "Telefon 1: 0222 320 36 20 - Telefon 2: 0505 599 76 64",
                   "Açýk Saha",
                   "Ertuðrulgazi Mah. Ayþen Sk. No:20 (ACI BADEM HASTANESÝ ARKASI)",
-                  "39.782728",
-                  "30.493726"));
+                  "39.782716",
+                  "30.494037"));
 	      
 	      dbHelper.insertCountry(new Halisaha("SPORLAND HALI SAHA",
 	    		  "---",
                   "Açýk Saha 1, Açýk Saha 2",
                   "Büyükdere Mah. Balözü Sk. No:5 (Cemevi Arkasý)",
-                  "39.752901",
-                  "30.506540"));
+                  "39.753053",
+                  "30.505735"));
 	      
 	      
 		  dbHelper.insertCountry(new Halisaha("SPORTMEN CLUP",
 				  "Telefon 1: 0222 227 00 61 - Telefon 2: 0546 826 26 06",
                   "Açýk Saha 1,Açýk Saha 2,Kapalý Saha",
                   "Gökmeydan Mah. Kaðýthane Sk. No:51 (Turgut Reis Teknik Ve Endüstri Meslek Lisesi Bahçesi)",
-                  "39.769543",
-                  "30.553853"));
+                  "39.769941",
+                  "30.553494"));
 		  
 		 
 	      dbHelper.insertCountry(new Halisaha("ÇAVUÞOÐLU HALISAHA TESÝSLERÝ", 
 	    		  "Telefon: 0222 224 25 15",
                   "Kapalý Saha",
                   "Osmangazi Mah. Basýn Þehitleri Cad. Orhangazi ÝlkÖðretim Okul Bahçesi",
-                  "39.770048",
-                  "30.484357"));
+                  "39.769655",
+                  "30.484286"));
 	      
 	      dbHelper.insertCountry(new Halisaha("ÞAH HALI SAHA", 
 	    		  "---",
@@ -112,50 +112,50 @@ public class MainActivity extends Activity {
 	    		  "---",
                   "Kapalý Saha",
                   "Ömür Mah. Çember Sk. Kütayha Yolu",
-                  "39.750180",
-                  "30.459947"));
+                  "39.749722",
+                  "30.459362"));
 	      
 	      dbHelper.insertCountry(new Halisaha("ÞEKERSPOR HALI SAHA", 
 	    		  "Telefon: 0 222 230 27 44",
                   "Açýk Saha",
                   "Þeker Fabrikasý Lojmanlarý",
-                  "39.775888",
-                  "30.539940"));
+                  "39.775948",
+                  "30.539013"));
 	      
 	      dbHelper.insertCountry(new Halisaha("1965 EFSANE HALI SAHA", 
 	    		  "Telefon 1: 0222 320 30 03 - Telefon 2: 0533 762 99 77",
                   "Açýk Saha",
                   "Uluönder Mah. Cansen Sk. No:5 TEPEBAÞI",
-                  "39.783996",
-                  "30.488753"));
+                  "39.786051",
+                  "30.492492"));
 	      
 	      dbHelper.insertCountry(new Halisaha("GALÝP TÜRKAN HALI SAHA", 
 	    		  "Telefon: 0222 320 03 33",
                   "Açýk Saha",
                   "Ýsmet Ýnönü 2 Caddesi ( Ford - Opet Birmot Karþýsý)",
-                  "39.790118",
-                  "30.480757"));
+                  "39.790119",
+                  "30.480504"));
 	      
 	      dbHelper.insertCountry(new Halisaha("ES ES HALI SAHA", 
 	    		  "Telefon 1:  0546 546 81 26 - Telefon 2: 0555 386 12 08",
                   "Açýk Saha",
                   "Viþnelik Mah. Erenkuþ Sk. (kanlýkavak parký yaný)",
-                  "39.768490",
-                  "30.496666"));
+                  "39.768486",
+                  "30.496648"));
 	      
 	      dbHelper.insertCountry(new Halisaha("DENÝZ HALI SAHA", 
 	    		  "Telefon: 0222 225 11 88",
                   "Açýk Saha",
                   " Viþnelik Mah. Seda Sk. Odunpazarý",
-                  "39.766021",
-                  "30.504270"));
+                  "39.766014",
+                  "30.504178"));
 	      
 	      dbHelper.insertCountry(new Halisaha("ESKÝÞEHÝR HALI SAHA TESÝSLERÝ - ESKÝÞEHÝR OSMANGAZÝ ÜNÝVERSÝTESÝ",
-	    		  "Telefon 1: 0222 239 37 50 - Telefon 2:0222 239 13 69",
+	    		  "Telefon 1: 0222 239 37 50 - Dahili: 1369",
                   "Açýk Saha 1, Açýk Saha 2, Kapalý Saha",
                   "Meþelik Kampüsü Büyükdere Mah. Odunpazarý",
-                  "39.750414",
-                  "30.478301"));
+                  "39.750411",
+                  "30.478344"));
 
 	      
 	      SharedPreferences.Editor editor = settings.edit();
